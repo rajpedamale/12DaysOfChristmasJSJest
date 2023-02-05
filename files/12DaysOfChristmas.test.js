@@ -62,6 +62,23 @@ describe('12DaysOfChristmas poem', () => {
   it('should have the 14 lines in the last stanza', () => {
     const lastStanza = stanzas.slice(-1)[0];
     expect(lastStanza.split('\n').length).toEqual(14);
-
+  });
+  
+  it('should have the last stanza as given', () => {
+    const lastStanza = stanzas.slice(-1)[0];
+    expect(lastStanza).toEqual(`On the twelvth day of Christmas
+My true love gave to me:
+Twelve drummers drumming
+Eleven pipers piping
+Ten lords a-leaping
+Nine ladies dancing
+Eight maids a-milking
+Seven swans a-swimming
+Six geese a-laying
+Five golden rings
+Four calling birds
+Three french hens
+Two turtle doves and
+A partridge in a pear tree.`);
   });
 });
