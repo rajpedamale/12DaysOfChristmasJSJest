@@ -2,18 +2,37 @@ FAIL ./12DaysOfChristmas.test.js
   12DaysOfChristmas poem
     ✓ should have 12 stanzas (3 ms)
     ✓ should have every stanza end with same line (4 ms)
-    ✓ should have the same second line in every stanza (2 ms)
-    ✓ should have the first line in every stanza start and end the same way (9 ms)
-    ✓ should have the first line be different in every stanza
-    ✓ should have the last but one line in every stanza be the same for all stanzas after first (3 ms)
-    ✕ should have the third last line in third and later stanzas be the same  (5 ms)
+    ✓ should have the same second line in every stanza (1 ms)
+    ✓ should have the first line in every stanza start and end the same way (3 ms)
+    ✓ should have the first line be different in every stanza (1 ms)
+    ✕ should have the last but one line in every stanza be the same for all stanzas after first (4 ms)
+    ✕ should have the third last line in third and later stanzas be the same  (3 ms)
+
+  ● 12DaysOfChristmas poem › should have the last but one line in every stanza be the same for all stanzas after first
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "Two turtle doves and"
+    Received: "false"
+
+      49 |     stanzas.slice(1).forEach(stanza => {
+      50 |       const lastButOneLine = getNthLine(-2, stanza);
+    > 51 |       expect(lastButOneLine).toEqual('Two turtle doves and');
+         |                              ^
+      52 |     });
+      53 |   });
+      54 |   
+
+      at forEach (12DaysOfChristmas.test.js:51:30)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:49:22)
 
   ● 12DaysOfChristmas poem › should have the third last line in third and later stanzas be the same 
 
     expect(received).toEqual(expected) // deep equality
 
     Expected: "Three french hens"
-    Received: "My true love gave to me:"
+    Received: "Two turtle doves and"
 
       56 |     stanzas.slice(2).forEach(stanza => {
       57 |       const thirdLastLine = getNthLine(-3, stanza);
@@ -28,9 +47,9 @@ FAIL ./12DaysOfChristmas.test.js
       at Object.<anonymous> (12DaysOfChristmas.test.js:56:22)
 
 Test Suites: 1 failed, 1 total
-Tests:       1 failed, 6 passed, 7 total
+Tests:       2 failed, 5 passed, 7 total
 Snapshots:   0 total
-Time:        1.447 s
+Time:        1.498 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -41,4 +60,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T10_14_04_443Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T10_15_37_501Z-debug.log
