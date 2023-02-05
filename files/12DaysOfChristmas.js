@@ -1,7 +1,7 @@
 'use strict';
 
 function TwelveDaysOfChristmasSong() {
-  return 6 * 9;
+  return '';
 }
 
 module.exports = TwelveDaysOfChristmasSong;
