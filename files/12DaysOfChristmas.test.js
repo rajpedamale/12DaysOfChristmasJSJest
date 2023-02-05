@@ -16,7 +16,7 @@ describe('12DaysOfChristmas poem', () => {
   
   it('should have every stanza end with same line', () => {
     stanzas.forEach(stanza => {
-      const lastLine = stanza.trim().split('\n').slice(-1)[0];
+      const lastLine = stanza.split('\n').slice(-1)[0];
       expect(lastLine).toEqual('A partridge in a pear tree.');
     });
   });
