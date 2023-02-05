@@ -52,10 +52,16 @@ describe('12DaysOfChristmas poem', () => {
     });
   });
   
-  it('should have the third last line in third and later stanzas be the same ', () => {
+  it('should have the third last line in third and later stanzas be the same', () => {
     stanzas.slice(2).forEach(stanza => {
       const thirdLastLine = getNthLine(-3, stanza);
       expect(thirdLastLine).toEqual('Three french hens');
     });
+  });
+  
+  it('should have the 14 lines in the last stanza', () => {
+    const lastStanza = stanzas.slice(-1)[0];
+    expect(lastStanza.length).toEqual(14);
+
   });
 });

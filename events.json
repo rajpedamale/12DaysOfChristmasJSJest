@@ -811,5 +811,21 @@
       0,
       177003
     ]
+  },
+  {
+    "duration": 4.425769,
+    "colour": "red",
+    "predicted": "red",
+    "revert_if_wrong": "off",
+    "index": 51,
+    "time": [
+      2023,
+      2,
+      5,
+      10,
+      20,
+      29,
+      772501
+    ]
   }
 ]

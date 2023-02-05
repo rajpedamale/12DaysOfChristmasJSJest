@@ -1,15 +1,43 @@
-PASS ./12DaysOfChristmas.test.js
+FAIL ./12DaysOfChristmas.test.js
   12DaysOfChristmas poem
-    ✓ should have 12 stanzas (4 ms)
+    ✓ should have 12 stanzas (3 ms)
     ✓ should have every stanza end with same line (2 ms)
-    ✓ should have the same second line in every stanza (1 ms)
+    ✓ should have the same second line in every stanza (2 ms)
     ✓ should have the first line in every stanza start and end the same way (5 ms)
     ✓ should have the first line be different in every stanza
     ✓ should have the last but one line in every stanza be the same for all stanzas after first (2 ms)
-    ✓ should have the third last line in third and later stanzas be the same  (1 ms)
+    ✓ should have the third last line in third and later stanzas be the same (3 ms)
+    ✕ should have the 14 lines in the last stanza (2 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       7 passed, 7 total
+  ● 12DaysOfChristmas poem › should have the 14 lines in the last stanza
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 14
+    Received: 123
+
+      62 |   it('should have the 14 lines in the last stanza', () => {
+      63 |     const lastStanza = stanzas.slice(-1)[0];
+    > 64 |     expect(lastStanza.length).toEqual(14);
+         |                               ^
+      65 | 
+      66 |   });
+      67 | });
+
+      at Object.<anonymous> (12DaysOfChristmas.test.js:64:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 7 passed, 8 total
 Snapshots:   0 total
-Time:        1.477 s
+Time:        1.523 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --coverage`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T10_20_29_273Z-debug.log
