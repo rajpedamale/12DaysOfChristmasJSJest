@@ -4,4 +4,4 @@ function twelveDaysOfChristmasSong() {
   return '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n';
 }
 
-module.exports = TwelveDaysOfChristmasSong;
+module.exports = twelveDaysOfChristmasSong;
