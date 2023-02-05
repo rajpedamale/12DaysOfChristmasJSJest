@@ -4,6 +4,10 @@ const twelveDaysOfChristmasSong = require('./12DaysOfChristmas');
 let poem;
 let stanzas;
 
+const getNthLine = (n, lines) => {
+  return lines.split('\n').slice(n)[0];
+};
+
 describe('12DaysOfChristmas poem', () => {
   beforeEach(() => {
     poem = twelveDaysOfChristmasSong();
@@ -16,14 +20,14 @@ describe('12DaysOfChristmas poem', () => {
   
   it('should have every stanza end with same line', () => {
     stanzas.forEach(stanza => {
-      const lastLine = stanza.split('\n').slice(-1)[0];
+      const lastLine = getNthLine(-1, stanza);
       expect(lastLine).toEqual('A partridge in a pear tree.');
     });
   });
   
   it('should have the same second line in every stanza', () => {
     stanzas.forEach(stanza => {
-      const secondLine = stanza.split('\n')[1];
+      const secondLine = getNthLine(1, stanza);
       expect(secondLine).toEqual('My true love gave to me:');
     });
   });
