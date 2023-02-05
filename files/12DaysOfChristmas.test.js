@@ -43,12 +43,19 @@ describe('12DaysOfChristmas poem', () => {
     const firstLines = stanzas.map(stanza => getNthLine(0, stanza));
     const firstLinesSet = new Set(firstLines);
     expect(firstLinesSet.size).toEqual(12);
-  });  
+  });
   
-  it('should have the last but one line in every stanza end with "and" for all stanzas after first', () => {
+  it('should have the last but one line in every stanza be the same for all stanzas after first', () => {
+    stanzas.slice(1).forEach(stanza => {
+      const lastButOneLine = getNthLine(-2, stanza);
+      expect(lastButOneLine).toEqual('Two turtle doves and');
+    });
+  });
+  
+  it.skip('should have the second and later stanzas contain', () => {
     stanzas.slice(1).forEach(stanza => {
       const lastButOneLine = getNthLine(-2, stanza);
       expect(lastButOneLine).toMatch(/.* and/);
     });
-  });  
+  });
 });
