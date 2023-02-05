@@ -41,8 +41,8 @@ describe('12DaysOfChristmas poem', () => {
   
   it('should have the last but one line in every stanza end with "and" for all stanzas after first', () => {
     stanzas.slice(1).forEach(stanza => {
-      const firstLine = getNthLine(-2, stanza);
-      expect(firstLine).toMatch(/.* and/);
+      const lastButOneLine = getNthLine(-2, stanza);
+      expect(lastButOneLine).toMatch(/.* and/);
     });
   });  
   
