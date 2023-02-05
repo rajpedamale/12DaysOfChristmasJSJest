@@ -7,15 +7,15 @@ npm ERR! Failed at the @ lint script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T09_24_42_661Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T09_26_00_700Z-debug.log
 PASS ./12DaysOfChristmas.test.js
   12DaysOfChristmas poem
     ✓ should have 12 stanzas (3 ms)
     ✓ should have every stanza end with same line (2 ms)
-    ✓ should have the same second line in every stanza (5 ms)
+    ✓ should have the same second line in every stanza (2 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       3 passed, 3 total
 Snapshots:   0 total
-Time:        1.393 s
+Time:        1.412 s
 Ran all test suites.

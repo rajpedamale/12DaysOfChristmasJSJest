@@ -5,7 +5,10 @@ const secondLine = 'My true love gave to me:';
 const lastLine = 'A partridge in a pear tree.'
 
 function twelveDaysOfChristmasSong() {
-  const stanzas = days.map((day) => `\n${secondLine}\n${lastLine}\n`);
+  const stanzas = days.map((day) => `
+${secondLine}
+${lastLine}
+`);
   return stanzas.join('\n');
 }
 
