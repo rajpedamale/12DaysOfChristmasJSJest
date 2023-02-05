@@ -1,7 +1,11 @@
 'use strict';
 
+const days = new Array(12).fill('\n');
+
+
 function twelveDaysOfChristmasSong() {
-  return '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n';
+  const stanzas = days.map((day) => day);
+  return stanzas.join('\n');
 }
 
 module.exports = twelveDaysOfChristmasSong;
