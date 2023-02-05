@@ -1,14 +1,14 @@
 PASS ./12DaysOfChristmas.test.js
   12DaysOfChristmas poem
     ✓ should have 12 stanzas (3 ms)
-    ✓ should have every stanza end with same line (4 ms)
-    ✓ should have the same second line in every stanza (2 ms)
+    ✓ should have every stanza end with same line (2 ms)
+    ✓ should have the same second line in every stanza (3 ms)
     ✓ should have the first line in every stanza start and end the same way (3 ms)
-    ✓ should have the last but one line in every stanza end with "and" for all stanzas after first (3 ms)
     ✓ should have the first line should be different in every stanza
+    ✓ should have the last but one line in every stanza end with "and" for all stanzas after first (2 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       6 passed, 6 total
 Snapshots:   0 total
-Time:        1.378 s
+Time:        1.451 s
 Ran all test suites.
