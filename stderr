@@ -1,15 +1,44 @@
-PASS ./12DaysOfChristmas.test.js
+FAIL ./12DaysOfChristmas.test.js
   12DaysOfChristmas poem
-    ✓ should have 12 stanzas (3 ms)
+    ✓ should have 12 stanzas (2 ms)
     ✓ should have every stanza end with same line (2 ms)
-    ✓ should have the same second line in every stanza (2 ms)
-    ✓ should have the first line in every stanza start and end the same way (4 ms)
-    ✓ should have the first line be different in every stanza (1 ms)
-    ✓ should have the last but one line in every stanza be the same for all stanzas after first (1 ms)
-    ✓ should have the third last line in third and later stanzas be the same  (2 ms)
+    ✓ should have the same second line in every stanza (3 ms)
+    ✓ should have the first line in every stanza start and end the same way (3 ms)
+    ✓ should have the first line be different in every stanza
+    ✕ should have the last but one line in every stanza be the same for all stanzas after first (6 ms)
+    ✓ should have the third last line in third and later stanzas be the same  (1 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       7 passed, 7 total
+  ● 12DaysOfChristmas poem › should have the last but one line in every stanza be the same for all stanzas after first
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "Two turtle doves and"
+    Received: "My true love gave to me:"
+
+      49 |     stanzas.slice(1).forEach(stanza => {
+      50 |       const lastButOneLine = getNthLine(-2, stanza);
+    > 51 |       expect(lastButOneLine).toEqual('Two turtle doves and');
+         |                              ^
+      52 |     });
+      53 |   });
+      54 |   
+
+      at forEach (12DaysOfChristmas.test.js:51:30)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:49:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
 Snapshots:   0 total
-Time:        1.488 s
+Time:        1.47 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --coverage`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T10_16_45_781Z-debug.log
