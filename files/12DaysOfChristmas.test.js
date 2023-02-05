@@ -38,4 +38,10 @@ describe('12DaysOfChristmas poem', () => {
       expect(firstLine).toMatch(/On the \w+ day of Christmas/);
     });
   });  
+  
+  it('should have the first line should be different in every stanza', () => {
+    const firstLines = stanzas.map(stanza => getNthLine(0, stanza));
+    const firstLinesSet = new Set(firstLines);
+    expect(firstLinesSet.size).toMatch(12);
+  });  
 });
