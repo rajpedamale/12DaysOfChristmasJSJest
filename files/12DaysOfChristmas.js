@@ -1,6 +1,6 @@
 'use strict';
 
-function TwelveDaysOfChristmasSong() {
+function twelveDaysOfChristmasSong() {
   return '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n';
 }
 

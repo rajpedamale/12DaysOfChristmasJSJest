@@ -91,5 +91,21 @@
       42,
       328997
     ]
+  },
+  {
+    "duration": 4.251554,
+    "colour": "red",
+    "predicted": "green",
+    "revert_if_wrong": "off",
+    "index": 6,
+    "time": [
+      2023,
+      2,
+      5,
+      8,
+      44,
+      18,
+      909016
+    ]
   }
 ]
