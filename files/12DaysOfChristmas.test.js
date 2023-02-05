@@ -39,7 +39,7 @@ describe('12DaysOfChristmas poem', () => {
     });
   });  
   
-  it('should have the first line should be different in every stanza', () => {
+  it('should have the first line be different in every stanza', () => {
     const firstLines = stanzas.map(stanza => getNthLine(0, stanza));
     const firstLinesSet = new Set(firstLines);
     expect(firstLinesSet.size).toEqual(12);
@@ -52,10 +52,10 @@ describe('12DaysOfChristmas poem', () => {
     });
   });
   
-  it.skip('should have the second and later stanzas contain', () => {
-    stanzas.slice(1).forEach(stanza => {
-      const lastButOneLine = getNthLine(-2, stanza);
-      expect(lastButOneLine).toMatch(/.* and/);
+  it('should have the third last line in third and later stanzas be the same ', () => {
+    stanzas.slice(2).forEach(stanza => {
+      const thirdLastLine = getNthLine(-3, stanza);
+      expect(thirdLastLine).toEqual('Three french hens');
     });
   });
 });
