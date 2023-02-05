@@ -1,6 +1,6 @@
 'use strict';
 
-const days = new Array(12).fill('\n');
+const days = new Array(12).fill('A partridge in a pear tree.\n');
 
 
 function twelveDaysOfChristmasSong() {
