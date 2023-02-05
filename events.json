@@ -235,5 +235,21 @@
       22,
       201412
     ]
+  },
+  {
+    "duration": 4.117445,
+    "colour": "green",
+    "predicted": "green",
+    "revert_if_wrong": "off",
+    "index": 15,
+    "time": [
+      2023,
+      2,
+      5,
+      9,
+      14,
+      17,
+      218986
+    ]
   }
 ]
