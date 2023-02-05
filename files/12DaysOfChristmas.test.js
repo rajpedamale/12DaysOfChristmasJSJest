@@ -7,7 +7,7 @@ let stanzas;
 describe('12DaysOfChristmas poem', () => {
   beforeEach(() => {
     poem = twelveDaysOfChristmasSong();
-    stanzas = poem.split('\n\n')
+    stanzas = poem.split('\n\n');
   });
   
   it('should have 12 stanzas', () => {
