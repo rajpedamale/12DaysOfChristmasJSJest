@@ -14,4 +14,11 @@ describe('12DaysOfChristmas poem', () => {
         expect(stanza.trim()).toEqual('A partridge in a pear tree.');
     });
   });
+  /*
+  it('should have every stanza end with same line', () => {
+    const stanzas = twelveDaysOfChristmasSong().split('\n\n');
+    stanzas.forEach(stanza => {
+        expect(stanza.trim()).toEqual('My true love gave to me:');
+    });
+  });*/  
 });
