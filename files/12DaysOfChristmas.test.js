@@ -59,7 +59,7 @@ describe('12DaysOfChristmas poem', () => {
     });
   });
   
-  it.skip('should have the 14 lines in the last stanza', () => {
+  it('should have the 14 lines in the last stanza', () => {
     const lastStanza = stanzas.slice(-1)[0];
     expect(lastStanza.split('\n').length).toEqual(14);
 
