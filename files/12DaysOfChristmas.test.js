@@ -9,7 +9,7 @@ describe('12DaysOfChristmas poem', () => {
   });
   
   it('should have every stanza end with same line', () => {
-    const stanzas = twelveDaysOfChristmasSong().poem.split('\n\n');
+    const stanzas = twelveDaysOfChristmasSong().split('\n\n');
     stanzas.forEach(stanza => {
         expect(stanza).toEqual('A partridge in a pear tree.');
     });

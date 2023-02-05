@@ -5,17 +5,22 @@ FAIL ./12DaysOfChristmas.test.js
 
   ● 12DaysOfChristmas poem › should have every stanza end with same line
 
-    TypeError: Cannot read property 'split' of undefined
+    expect(received).toEqual(expected) // deep equality
 
-      10 |   
-      11 |   it('should have every stanza end with same line', () => {
-    > 12 |     const stanzas = twelveDaysOfChristmasSong().poem.split('\n\n');
-         |                     ^
+    Expected: "A partridge in a pear tree."
+    Received: ""
+
+      12 |     const stanzas = twelveDaysOfChristmasSong().split('\n\n');
       13 |     stanzas.forEach(stanza => {
-      14 |         expect(stanza).toEqual('A partridge in a pear tree.');
+    > 14 |         expect(stanza).toEqual('A partridge in a pear tree.');
+         |                        ^
       15 |     });
+      16 |   });
+      17 | });
 
-      at Object.<anonymous> (12DaysOfChristmas.test.js:12:21)
+      at forEach (12DaysOfChristmas.test.js:14:24)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:13:13)
 
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 passed, 2 total
@@ -31,4 +36,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T08_55_36_286Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T08_55_56_727Z-debug.log

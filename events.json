@@ -155,5 +155,21 @@
       36,
       675930
     ]
+  },
+  {
+    "duration": 4.202014,
+    "colour": "red",
+    "predicted": "red",
+    "revert_if_wrong": "off",
+    "index": 10,
+    "time": [
+      2023,
+      2,
+      5,
+      8,
+      55,
+      57,
+      134119
+    ]
   }
 ]
