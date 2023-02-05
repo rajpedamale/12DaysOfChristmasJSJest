@@ -1,9 +1,36 @@
-PASS ./12DaysOfChristmas.test.js
+FAIL ./12DaysOfChristmas.test.js
   12DaysOfChristmas poem
-    ✓ should compile and return string (4 ms)
+    ✕ should have 12 stanzas (6 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
+  ● 12DaysOfChristmas poem › should have 12 stanzas
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 12
+    Received: [""]
+
+       6 |   it('should have 12 stanzas', () => {
+       7 |     const poem = TwelveDaysOfChristmasSong();
+    >  8 |     expect(poem.split('\n\n')).toEqual(12);
+         |                                ^
+       9 |   });
+      10 | });
+      11 | 
+
+      at Object.<anonymous> (12DaysOfChristmas.test.js:8:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.35 s
+Time:        1.387 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --coverage`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T08_42_01_330Z-debug.log

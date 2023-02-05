@@ -3,7 +3,8 @@
 const TwelveDaysOfChristmasSong = require('./12DaysOfChristmas');
 
 describe('12DaysOfChristmas poem', () => {
-  it('should compile and return string', () => {
-    expect(TwelveDaysOfChristmasSong()).toEqual('');
+  it('should have 12 stanzas', () => {
+    const poem = TwelveDaysOfChristmasSong();
+    expect(poem.split('\n\n')).toEqual(12);
   });
 });
