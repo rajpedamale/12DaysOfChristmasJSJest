@@ -1,7 +1,17 @@
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ lint: `eslint --config ${CYBER_DOJO_SANDBOX}/.eslintrc.json /**/*.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ lint script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T09_23_18_633Z-debug.log
 FAIL ./12DaysOfChristmas.test.js
   12DaysOfChristmas poem
-    ✓ should have 12 stanzas (2 ms)
-    ✓ should have every stanza end with same line (3 ms)
+    ✓ should have 12 stanzas (3 ms)
+    ✓ should have every stanza end with same line (2 ms)
     ✕ should have the same second line in every stanza (2 ms)
 
   ● 12DaysOfChristmas poem › should have the same second line in every stanza
@@ -26,7 +36,7 @@ FAIL ./12DaysOfChristmas.test.js
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 2 passed, 3 total
 Snapshots:   0 total
-Time:        1.563 s
+Time:        1.398 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -37,4 +47,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T09_21_10_066Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T09_23_21_035Z-debug.log
