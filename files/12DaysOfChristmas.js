@@ -21,8 +21,8 @@ const lastLine = 'A partridge in a pear tree.';
 function twelveDaysOfChristmasSong() {
   const stanzas = days.map((day, index) => `On the ${day.day} day of Christmas
 ${secondLine}
-${index && 'Two turtle doves and'}
 ${index>1 && thirdLine}
+${index && 'Two turtle doves and'}
 ${lastLine}`);
   return stanzas.join('\n\n');
 }
