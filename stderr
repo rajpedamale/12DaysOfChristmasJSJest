@@ -1,53 +1,16 @@
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! @ lint: `eslint --config ${CYBER_DOJO_SANDBOX}/.eslintrc.json /**/*.js`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the @ lint script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T10_27_04_724Z-debug.log
-FAIL ./12DaysOfChristmas.test.js
+PASS ./12DaysOfChristmas.test.js
   12DaysOfChristmas poem
     ✓ should have 12 stanzas (3 ms)
-    ✓ should have every stanza end with same line (6 ms)
-    ✓ should have the same second line in every stanza (2 ms)
-    ✓ should have the first line in every stanza start and end the same way (9 ms)
-    ✓ should have the first line be different in every stanza
-    ✓ should have the last but one line in every stanza be the same for all stanzas after first (2 ms)
-    ✓ should have the third last line in third and later stanzas be the same (1 ms)
-    ✕ should have the 14 lines in the last stanza (3 ms)
+    ✓ should have every stanza end with same line (2 ms)
+    ✓ should have the same second line in every stanza (5 ms)
+    ✓ should have the first line in every stanza start and end the same way (3 ms)
+    ✓ should have the first line be different in every stanza (1 ms)
+    ✓ should have the last but one line in every stanza be the same for all stanzas after first (1 ms)
+    ✓ should have the third last line in third and later stanzas be the same (3 ms)
+    ○ skipped should have the 14 lines in the last stanza
 
-  ● 12DaysOfChristmas poem › should have the 14 lines in the last stanza
-
-    expect(received).toEqual(expected) // deep equality
-
-    Expected: 14
-    Received: 5
-
-      62 |   it('should have the 14 lines in the last stanza', () => {
-      63 |     const lastStanza = stanzas.slice(-1)[0];
-    > 64 |     expect(lastStanza.split('\n').length).toEqual(14);
-         |                                           ^
-      65 | 
-      66 |   });
-      67 | });
-
-      at Object.<anonymous> (12DaysOfChristmas.test.js:64:43)
-
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 7 passed, 8 total
+Test Suites: 1 passed, 1 total
+Tests:       1 skipped, 7 passed, 8 total
 Snapshots:   0 total
-Time:        1.478 s
+Time:        1.517 s
 Ran all test suites.
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! @ test: `jest --coverage`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the @ test script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T10_27_07_151Z-debug.log

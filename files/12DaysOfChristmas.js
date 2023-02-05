@@ -31,15 +31,16 @@ const secondAndLaterLines = [
 ];
 
 function twelveDaysOfChristmasSong() {
-  const stanzas = days.map((day, index) => {
-    return `On the ${day.day} day of Christmas
-${secondAndLaterLines[0]}
-${index>1 && secondAndLaterLines[10]}
-${index && secondAndLaterLines[11]}
-${secondAndLaterLines[12]}`
-});
-  
-  return stanzas.join('\n\n');
+    const stanzas = days.map((day, index) => {
+        const stanza = [`On the ${day.day} day of Christmas`];
+        stanza.push(secondAndLaterLines[0]);
+        index>1 && stanza.push(secondAndLaterLines[10]);
+        index && stanza.push(secondAndLaterLines[11]);
+        stanza.push(secondAndLaterLines[12]);
+        return stanza.join('\n');
+    });
+
+    return stanzas.join('\n\n');
 }
 
 module.exports = twelveDaysOfChristmasSong;
