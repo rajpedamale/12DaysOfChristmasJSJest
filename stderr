@@ -1,35 +1,276 @@
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ lint: `eslint --config ${CYBER_DOJO_SANDBOX}/.eslintrc.json /**/*.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ lint script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T10_25_44_631Z-debug.log
 FAIL ./12DaysOfChristmas.test.js
   12DaysOfChristmas poem
-    ✓ should have 12 stanzas (2 ms)
-    ✓ should have every stanza end with same line (1 ms)
-    ✓ should have the same second line in every stanza (2 ms)
-    ✓ should have the first line in every stanza start and end the same way (7 ms)
-    ✓ should have the first line be different in every stanza
-    ✓ should have the last but one line in every stanza be the same for all stanzas after first (2 ms)
-    ✓ should have the third last line in third and later stanzas be the same (1 ms)
-    ✕ should have the 14 lines in the last stanza (3 ms)
+    ✕ should have 12 stanzas (5 ms)
+    ✕ should have every stanza end with same line (1 ms)
+    ✕ should have the same second line in every stanza (1 ms)
+    ✕ should have the first line in every stanza start and end the same way (1 ms)
+    ✕ should have the first line be different in every stanza (1 ms)
+    ✕ should have the last but one line in every stanza be the same for all stanzas after first (1 ms)
+    ✕ should have the third last line in third and later stanzas be the same
+    ✕ should have the 14 lines in the last stanza
+
+  ● 12DaysOfChristmas poem › should have 12 stanzas
+
+    ReferenceError: lastLine is not defined
+
+      37 | ${index>1 && thirdLastLine}
+      38 | ${index && secondLastLine}
+    > 39 | ${lastLine}`
+         |   ^
+      40 | });
+      41 |   
+      42 |   return stanzas.join('\n\n');
+
+      at map (12DaysOfChristmas.js:39:3)
+          at Array.map (<anonymous>)
+      at twelveDaysOfChristmasSong (12DaysOfChristmas.js:34:24)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:13:12)
+
+  ● 12DaysOfChristmas poem › should have 12 stanzas
+
+    TypeError: Cannot read property 'length' of undefined
+
+      16 |   
+      17 |   it('should have 12 stanzas', () => {
+    > 18 |     expect(stanzas.length).toEqual(12);
+         |                    ^
+      19 |   });
+      20 |   
+      21 |   it('should have every stanza end with same line', () => {
+
+      at Object.<anonymous> (12DaysOfChristmas.test.js:18:20)
+
+  ● 12DaysOfChristmas poem › should have every stanza end with same line
+
+    ReferenceError: lastLine is not defined
+
+      37 | ${index>1 && thirdLastLine}
+      38 | ${index && secondLastLine}
+    > 39 | ${lastLine}`
+         |   ^
+      40 | });
+      41 |   
+      42 |   return stanzas.join('\n\n');
+
+      at map (12DaysOfChristmas.js:39:3)
+          at Array.map (<anonymous>)
+      at twelveDaysOfChristmasSong (12DaysOfChristmas.js:34:24)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:13:12)
+
+  ● 12DaysOfChristmas poem › should have every stanza end with same line
+
+    TypeError: Cannot read property 'forEach' of undefined
+
+      20 |   
+      21 |   it('should have every stanza end with same line', () => {
+    > 22 |     stanzas.forEach(stanza => {
+         |             ^
+      23 |       const lastLine = getNthLine(-1, stanza);
+      24 |       expect(lastLine).toEqual('A partridge in a pear tree.');
+      25 |     });
+
+      at Object.<anonymous> (12DaysOfChristmas.test.js:22:13)
+
+  ● 12DaysOfChristmas poem › should have the same second line in every stanza
+
+    ReferenceError: lastLine is not defined
+
+      37 | ${index>1 && thirdLastLine}
+      38 | ${index && secondLastLine}
+    > 39 | ${lastLine}`
+         |   ^
+      40 | });
+      41 |   
+      42 |   return stanzas.join('\n\n');
+
+      at map (12DaysOfChristmas.js:39:3)
+          at Array.map (<anonymous>)
+      at twelveDaysOfChristmasSong (12DaysOfChristmas.js:34:24)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:13:12)
+
+  ● 12DaysOfChristmas poem › should have the same second line in every stanza
+
+    TypeError: Cannot read property 'forEach' of undefined
+
+      27 |   
+      28 |   it('should have the same second line in every stanza', () => {
+    > 29 |     stanzas.forEach(stanza => {
+         |             ^
+      30 |       const secondLine = getNthLine(1, stanza);
+      31 |       expect(secondLine).toEqual('My true love gave to me:');
+      32 |     });
+
+      at Object.<anonymous> (12DaysOfChristmas.test.js:29:13)
+
+  ● 12DaysOfChristmas poem › should have the first line in every stanza start and end the same way
+
+    ReferenceError: lastLine is not defined
+
+      37 | ${index>1 && thirdLastLine}
+      38 | ${index && secondLastLine}
+    > 39 | ${lastLine}`
+         |   ^
+      40 | });
+      41 |   
+      42 |   return stanzas.join('\n\n');
+
+      at map (12DaysOfChristmas.js:39:3)
+          at Array.map (<anonymous>)
+      at twelveDaysOfChristmasSong (12DaysOfChristmas.js:34:24)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:13:12)
+
+  ● 12DaysOfChristmas poem › should have the first line in every stanza start and end the same way
+
+    TypeError: Cannot read property 'forEach' of undefined
+
+      34 |   
+      35 |   it('should have the first line in every stanza start and end the same way', () => {
+    > 36 |     stanzas.forEach(stanza => {
+         |             ^
+      37 |       const firstLine = getNthLine(0, stanza);
+      38 |       expect(firstLine).toMatch(/On the \w+ day of Christmas/);
+      39 |     });
+
+      at Object.<anonymous> (12DaysOfChristmas.test.js:36:13)
+
+  ● 12DaysOfChristmas poem › should have the first line be different in every stanza
+
+    ReferenceError: lastLine is not defined
+
+      37 | ${index>1 && thirdLastLine}
+      38 | ${index && secondLastLine}
+    > 39 | ${lastLine}`
+         |   ^
+      40 | });
+      41 |   
+      42 |   return stanzas.join('\n\n');
+
+      at map (12DaysOfChristmas.js:39:3)
+          at Array.map (<anonymous>)
+      at twelveDaysOfChristmasSong (12DaysOfChristmas.js:34:24)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:13:12)
+
+  ● 12DaysOfChristmas poem › should have the first line be different in every stanza
+
+    TypeError: Cannot read property 'map' of undefined
+
+      41 |   
+      42 |   it('should have the first line be different in every stanza', () => {
+    > 43 |     const firstLines = stanzas.map(stanza => getNthLine(0, stanza));
+         |                                ^
+      44 |     const firstLinesSet = new Set(firstLines);
+      45 |     expect(firstLinesSet.size).toEqual(12);
+      46 |   });
+
+      at Object.<anonymous> (12DaysOfChristmas.test.js:43:32)
+
+  ● 12DaysOfChristmas poem › should have the last but one line in every stanza be the same for all stanzas after first
+
+    ReferenceError: lastLine is not defined
+
+      37 | ${index>1 && thirdLastLine}
+      38 | ${index && secondLastLine}
+    > 39 | ${lastLine}`
+         |   ^
+      40 | });
+      41 |   
+      42 |   return stanzas.join('\n\n');
+
+      at map (12DaysOfChristmas.js:39:3)
+          at Array.map (<anonymous>)
+      at twelveDaysOfChristmasSong (12DaysOfChristmas.js:34:24)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:13:12)
+
+  ● 12DaysOfChristmas poem › should have the last but one line in every stanza be the same for all stanzas after first
+
+    TypeError: Cannot read property 'slice' of undefined
+
+      47 |   
+      48 |   it('should have the last but one line in every stanza be the same for all stanzas after first', () => {
+    > 49 |     stanzas.slice(1).forEach(stanza => {
+         |             ^
+      50 |       const lastButOneLine = getNthLine(-2, stanza);
+      51 |       expect(lastButOneLine).toEqual('Two turtle doves and');
+      52 |     });
+
+      at Object.<anonymous> (12DaysOfChristmas.test.js:49:13)
+
+  ● 12DaysOfChristmas poem › should have the third last line in third and later stanzas be the same
+
+    ReferenceError: lastLine is not defined
+
+      37 | ${index>1 && thirdLastLine}
+      38 | ${index && secondLastLine}
+    > 39 | ${lastLine}`
+         |   ^
+      40 | });
+      41 |   
+      42 |   return stanzas.join('\n\n');
+
+      at map (12DaysOfChristmas.js:39:3)
+          at Array.map (<anonymous>)
+      at twelveDaysOfChristmasSong (12DaysOfChristmas.js:34:24)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:13:12)
+
+  ● 12DaysOfChristmas poem › should have the third last line in third and later stanzas be the same
+
+    TypeError: Cannot read property 'slice' of undefined
+
+      54 |   
+      55 |   it('should have the third last line in third and later stanzas be the same', () => {
+    > 56 |     stanzas.slice(2).forEach(stanza => {
+         |             ^
+      57 |       const thirdLastLine = getNthLine(-3, stanza);
+      58 |       expect(thirdLastLine).toEqual('Three french hens');
+      59 |     });
+
+      at Object.<anonymous> (12DaysOfChristmas.test.js:56:13)
 
   ● 12DaysOfChristmas poem › should have the 14 lines in the last stanza
 
-    expect(received).toEqual(expected) // deep equality
+    ReferenceError: lastLine is not defined
 
-    Expected: 14
-    Received: 5
+      37 | ${index>1 && thirdLastLine}
+      38 | ${index && secondLastLine}
+    > 39 | ${lastLine}`
+         |   ^
+      40 | });
+      41 |   
+      42 |   return stanzas.join('\n\n');
 
+      at map (12DaysOfChristmas.js:39:3)
+          at Array.map (<anonymous>)
+      at twelveDaysOfChristmasSong (12DaysOfChristmas.js:34:24)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:13:12)
+
+  ● 12DaysOfChristmas poem › should have the 14 lines in the last stanza
+
+    TypeError: Cannot read property 'slice' of undefined
+
+      61 |   
       62 |   it('should have the 14 lines in the last stanza', () => {
-      63 |     const lastStanza = stanzas.slice(-1)[0];
-    > 64 |     expect(lastStanza.split('\n').length).toEqual(14);
-         |                                           ^
+    > 63 |     const lastStanza = stanzas.slice(-1)[0];
+         |                                ^
+      64 |     expect(lastStanza.split('\n').length).toEqual(14);
       65 | 
       66 |   });
-      67 | });
 
-      at Object.<anonymous> (12DaysOfChristmas.test.js:64:43)
+      at Object.<anonymous> (12DaysOfChristmas.test.js:63:32)
 
 Test Suites: 1 failed, 1 total
-Tests:       1 failed, 7 passed, 8 total
+Tests:       8 failed, 8 total
 Snapshots:   0 total
-Time:        1.529 s
+Time:        1.402 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -40,4 +281,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T10_21_01_686Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2023-02-05T10_25_47_065Z-debug.log
