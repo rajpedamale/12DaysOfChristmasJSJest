@@ -1,7 +1,7 @@
 'use strict';
 
 function TwelveDaysOfChristmasSong() {
-  return '';
+  return '\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n';
 }
 
 module.exports = TwelveDaysOfChristmasSong;
