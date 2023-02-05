@@ -31,4 +31,11 @@ describe('12DaysOfChristmas poem', () => {
       expect(secondLine).toEqual('My true love gave to me:');
     });
   });
+  
+  it('should have the first line in every stanza start and end the same way', () => {
+    stanzas.forEach(stanza => {
+      const firstLine = getNthLine(0, stanza);
+      expect(firstLine).toMatch(/On the  \w+ day of Christmas/);
+    });
+  });  
 });
