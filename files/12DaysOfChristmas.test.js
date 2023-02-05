@@ -20,10 +20,10 @@ describe('12DaysOfChristmas poem', () => {
     });
   });
   /*
-  it('should have every stanza end with same line', () => {
+  it('should have the same second line in every stanza', () => {
     const stanzas = twelveDaysOfChristmasSong().split('\n\n');
     stanzas.forEach(stanza => {
         expect(stanza.trim()).toEqual('My true love gave to me:');
     });
-  });*/  
+  });*/
 });
