@@ -6,6 +6,7 @@ const lastLine = 'A partridge in a pear tree.';
 
 function twelveDaysOfChristmasSong() {
   const stanzas = days.map((day) => `
+On the first day of Christmas
 ${secondLine}
 ${lastLine}`);
   return stanzas.join('\n\n');
