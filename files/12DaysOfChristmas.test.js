@@ -23,7 +23,7 @@ describe('12DaysOfChristmas poem', () => {
   
   it('should have the same second line in every stanza', () => {
     stanzas.forEach(stanza => {
-      const secondLine = stanza.split('\n')[2];
+      const secondLine = stanza.split('\n')[1];
       expect(secondLine).toEqual('My true love gave to me:');
     });
   });
