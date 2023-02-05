@@ -34,9 +34,9 @@ function twelveDaysOfChristmasSong() {
   const stanzas = days.map((day, index) => {
     return `On the ${day.day} day of Christmas
 ${secondAndLaterLines[0]}
-${index>1 && thirdLastLine}
-${index && secondLastLine}
-${lastLine}`
+${index>1 && secondAndLaterLines[10]}
+${index && secondAndLaterLines[11]}
+${secondAndLaterLines[12]}`
 });
   
   return stanzas.join('\n\n');
